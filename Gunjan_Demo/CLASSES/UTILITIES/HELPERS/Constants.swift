@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 
 let SCREEN_WIDTH = Int(UIScreen.main.bounds.width)
@@ -40,6 +41,10 @@ let LABEL_HEIGHT = 35
 var LABEL_WIDTH_SE = 150
 var LABEL_WIDTH = 200
 
+let LABEL_CELL_HEIGHT = 25
+let ROW_CELL_HEIGHT = 30
+let TABLE_HEADER_HEIGHT = 40
+
 let USERLIST_CELL_HEIGHT:CGFloat = 100.0
 
 let TABLEVIEW_CELL_HEIGHT:CGFloat = 90.0
@@ -48,7 +53,7 @@ let CONFIRM_CELL_HEIGHT:CGFloat = 75.0
 let CELL_LABEL_HEIGHT = 25
 let Order_CELL_LABEL_HEIGHT = 32
 
-let TABLEVIEW_Y_POSITION = STATUS_BAR_HEIGHT + Int(ParentClass.sharedInstance.iPhone_X_Top_Padding) + TOP_HEADER_HEIGHT + Int(TAB_HEADER_HEIGHT)
+let TABLEVIEW_Y_POSITION = STATUS_BAR_HEIGHT + Int(ParentClass.shared.iPhone_X_Top_Padding) + TOP_HEADER_HEIGHT + Int(TAB_HEADER_HEIGHT)
 
 let IS_IPHONE = (UI_USER_INTERFACE_IDIOM() == .phone)
 let IS_IPHONE_5 = (IS_IPHONE && UIScreen.main.bounds.size.height == 568.0)
@@ -60,7 +65,9 @@ let IS_IPHONE_XR = (IS_IPHONE && UIScreen.main.nativeBounds.size.height == 1792.
 // It's compatble for iphone x, xr and xmax
 // So it is used for iphone x porpose as well as for iphone x,xmax and xr
 // When it is used for iphone x , xmax and xr, set iphone x condition at last in if condition
-let IS_IPHONE_X_XR_XMAX_12 = (IS_IPHONE && UIScreen.main.bounds.size.height == 812.0) || (IS_IPHONE && UIScreen.main.bounds.size.height == 896.0) || (IS_IPHONE && UIScreen.main.bounds.size.height == 844.0) || (IS_IPHONE && UIScreen.main.bounds.size.height == 926.0)
+let IS_PHONE_6_7_8 = (IS_IPHONE && UIScreen.main.bounds.size.height == 568.0) || (IS_IPHONE && UIScreen.main.bounds.size.height == 667.0) || (IS_IPHONE && UIScreen.main.bounds.size.height == 736.0)
+
+let IS_IPHONE_X_XR_XMAX_12 = (IS_IPHONE && UIScreen.main.bounds.size.height == 812.0) || (IS_IPHONE && UIScreen.main.bounds.size.height == 896.0) || (IS_IPHONE && UIScreen.main.bounds.size.height == 844.0) || (IS_IPHONE && UIScreen.main.bounds.size.height == 926.0) || (IS_IPHONE && UIScreen.main.bounds.size.height == 780.0)
 
 
 let CELL_HEIGHT = 80
@@ -158,7 +165,6 @@ let colorSubHeading_76 = UIColor (hex: "767676")
 let colorSubSubHeading_94 = UIColor (hex: "949494")
 let colorDividerBG_f4 = UIColor (hex: "f4f4f4")
 let colorPlaceHolder_C6 = UIColor (hex: "c6c6c6")
-let colorBudget = UIColor (hex: "0078ff")
 let colorRed = UIColor (hex: "D32F2F")
 
 
@@ -192,48 +198,27 @@ let  LOADING_TITLE = "Please Wait..."
 let  UPLAOD_TITLE = "Uploading..."
 
 
-let STORED_UNIT_PHOTOS_KEY = "STORED_UNIT_PHOTOS"
-let STORED_PRODUCT_PHOTOS_KEY = "STORED_PRODUCT_PHOTOS"
-let STORED_MANIFACTURING_UNIT_PHOTOS_KEY = "STORED_MANIFACTURING_UNIT_PHOTOS_KEY"
-let STORED_MANIFACTURING_UNIT_VIDEO_KEY = "STORED_MANIFACTURING_UNIT_VIDEO_KEY"
-let STORED_ACHIEVEMENT_PHOTO_KEY = "STORED_ACHIEVEMENT_PHOTO_KEY"
+//MARK: - DateTime -
+let dateTimeFormatDefault          = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+let dateTimeFormatDisplay          = "MMM dd,yyyy hh:mm a" 
+let dateFormatDefault                 = "yyyy-MM-dd"
+let dateFormatDisplay                 = "MM-dd-yyyy"
+let timeFormatDefault                 = "HH:mm"
+let timeFormatDisplay                 = "hh:mm a"     //12:00 AM
+let dateTimeFormatNotification     = "dd:MM:yyyy hh:mm:ss"
+let dateFormatShort                    = "dd MMM"
+let dateFormatShortMonth           = "MM-yyyy"
+let dateFormatShortMonthLoc      = "yyyy-MM"
+let dateFormatShortYear              = "yyyy"
+let dateFormatDisplaySort           = "MMM dd,yyyy"
+let dateFormatFilter                    = "MM/dd/yyyy"
 
-// ============================== java script fun =================
-let ADD_BTN_FUNCTION = "startDraw"
-let STOP_BTN_FUNCTION = "endDraw"
-let EDIT_BTN_FUNCTION = "toggleEdit"
-let DELETE_BTN_FUNCTION = "toggleDelete"
+var const_HeaderWithToken : HTTPHeaders   = ["Content-Type" : "multipart/form-data", "Accept": "application/json" ]
 
-// UNDO / REDO
-let REDO_BTN_FUNCTION = "redo"
-let UNDO_BTN_FUNCTION = "undo"
-
-let REMOVE_FEATURE_FUNCTION = "removeFeature"
-let RESET_DELETE_FUNCTION = "resetDelete"
-let LOAD_FEATURE_FUNCTION = "loadFeatures"
-let ZOOM_TO_FEATURE_FUNCTION = "zoomToFeature"
-let GET_DRAWN_GEOMETRY_FUNCTION = "getDrawnGeometry"
-let UNDO_EDIT_GEOMETRY_FUNCTION = "undoEdit"
-
-// LIVE LOCATION
-let SEND_LIVE_LOCATION_FUNCTION = "sendLiveLocation"
-
-// SHOW LAYER / TRACKS
-let SHOW_LAYER_FUNCTION = "showLayer"
-let HIDE_LAYER_FUNCTION = "hideLayer"
-let GET_LAYER_FUNCTION = "getLayerData"
-let ADD_LAYER_FUNCTION = "addLayer"
-// HSOW hide extrnal layers
-let SHOW_EXTERNAL_LAYER_FUNCTION = "showWMSLayer"
-let HIDE_EXTERNAL_LAYER_FUNCTION = "hideWMSLayer"
-
-let JS_PARAMETER_TYPE_TRACK = "track"
-let JS_PARAMETER_TYPE_LAYER = "layer"
-let JS_PARAMETER_TYPE_EDIT = "edit"
+//let radius : CGFloat = 6.0
+let borderwidth : CGFloat = 0.7
+let shadowradius : CGFloat = 2.0
 
 
-
-
-
-
-
+let tableCellColor : UIColor = .systemGray6
+let bordercolor : UIColor = .label

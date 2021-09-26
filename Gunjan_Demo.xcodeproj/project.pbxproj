@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,22 +15,8 @@
 		1861BC7E26FEF51000177B68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1861BC7526FEF51000177B68 /* Assets.xcassets */; };
 		1861BC7F26FEF51000177B68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1861BC7626FEF51000177B68 /* LaunchScreen.storyboard */; };
 		1861BC8026FEF51000177B68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1861BC7826FEF51000177B68 /* Main.storyboard */; };
-		1861BC8126FEF51000177B68 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1861BC7A26FEF51000177B68 /* Info.plist */; };
-		1861BC9526FEF5DC00177B68 /* LanguageStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BC8926FEF5DC00177B68 /* LanguageStrings.swift */; };
-		1861BC9626FEF5DC00177B68 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BC8A26FEF5DC00177B68 /* Consts.swift */; };
-		1861BC9726FEF5DC00177B68 /* GeneralConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BC8B26FEF5DC00177B68 /* GeneralConstants.swift */; };
-		1861BC9826FEF5DC00177B68 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BC8C26FEF5DC00177B68 /* Enums.swift */; };
-		1861BC9926FEF5DC00177B68 /* UIView_Borders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BC8D26FEF5DC00177B68 /* UIView_Borders.swift */; };
-		1861BC9A26FEF5DC00177B68 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BC8E26FEF5DC00177B68 /* RoundedView.swift */; };
-		1861BC9B26FEF5DC00177B68 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BC8F26FEF5DC00177B68 /* UserData.swift */; };
-		1861BC9C26FEF5DC00177B68 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BC9026FEF5DC00177B68 /* Extensions.swift */; };
-		1861BC9D26FEF5DC00177B68 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BC9126FEF5DC00177B68 /* Validation.swift */; };
-		1861BC9E26FEF5DC00177B68 /* CS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BC9226FEF5DC00177B68 /* CS.swift */; };
-		1861BC9F26FEF5DC00177B68 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BC9326FEF5DC00177B68 /* Utils.swift */; };
-		1861BCA026FEF5DC00177B68 /* AppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BC9426FEF5DC00177B68 /* AppUtilities.swift */; };
-		1861BCB326FEF5EF00177B68 /* GeneralConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BCA726FEF5EF00177B68 /* GeneralConstants.swift */; };
+		1861BCB326FEF5EF00177B68 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BCA726FEF5EF00177B68 /* Constants.swift */; };
 		1861BCB426FEF5EF00177B68 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BCA826FEF5EF00177B68 /* Enums.swift */; };
-		1861BCB526FEF5EF00177B68 /* UIView_Borders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BCA926FEF5EF00177B68 /* UIView_Borders.swift */; };
 		1861BCB626FEF5EF00177B68 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BCAA26FEF5EF00177B68 /* RoundedView.swift */; };
 		1861BCB726FEF5EF00177B68 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BCAB26FEF5EF00177B68 /* UserData.swift */; };
 		1861BCB826FEF5EF00177B68 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BCAC26FEF5EF00177B68 /* Extensions.swift */; };
@@ -39,6 +25,19 @@
 		1861BCBB26FEF5EF00177B68 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BCAF26FEF5EF00177B68 /* Utils.swift */; };
 		1861BCBC26FEF5EF00177B68 /* AppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BCB026FEF5EF00177B68 /* AppUtilities.swift */; };
 		189DD69727004B8400F0163E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DD69627004B8400F0163E /* APIManager.swift */; };
+		189DD6B42700526900F0163E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DD6B32700526900F0163E /* Utility.swift */; };
+		189DD6C8270063EA00F0163E /* ParentClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DD6C7270063EA00F0163E /* ParentClass.swift */; };
+		189DD71B27006DE300F0163E /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DD71A27006DE300F0163E /* ImageData.swift */; };
+		189DD78C2700749400F0163E /* YPDrawSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DD7752700749400F0163E /* YPDrawSignatureView.swift */; };
+		189DD78E2700749400F0163E /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DD7772700749400F0163E /* RadioView.swift */; };
+		189DD7902700749400F0163E /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DD7792700749400F0163E /* CustomButton.swift */; };
+		189DD7922700749400F0163E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DD77B2700749400F0163E /* CustomTextField.swift */; };
+		189DD7932700749400F0163E /* MaterialTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DD77C2700749400F0163E /* MaterialTextFiled.swift */; };
+		189DD7952700749400F0163E /* CustomComboBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DD77E2700749400F0163E /* CustomComboBoxView.swift */; };
+		189DD7962700749400F0163E /* CustomInputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DD77F2700749400F0163E /* CustomInputTextView.swift */; };
+		189DD7972700749400F0163E /* DropDownPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DD7802700749400F0163E /* DropDownPickerView.swift */; };
+		189DD79E2700749400F0163E /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DD7882700749400F0163E /* CustomLabel.swift */; };
+		189DD79F2700749400F0163E /* CustomTextFieldForAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DD7892700749400F0163E /* CustomTextFieldForAttribute.swift */; };
 		264DC70299C8FE25D378EC68 /* Pods_Gunjan_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D882B21F6D84F5F89C0DE3CE /* Pods_Gunjan_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,21 +73,8 @@
 		1861BC7726FEF51000177B68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1861BC7926FEF51000177B68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1861BC7A26FEF51000177B68 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1861BC8926FEF5DC00177B68 /* LanguageStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageStrings.swift; sourceTree = "<group>"; };
-		1861BC8A26FEF5DC00177B68 /* Consts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
-		1861BC8B26FEF5DC00177B68 /* GeneralConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralConstants.swift; sourceTree = "<group>"; };
-		1861BC8C26FEF5DC00177B68 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		1861BC8D26FEF5DC00177B68 /* UIView_Borders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_Borders.swift; sourceTree = "<group>"; };
-		1861BC8E26FEF5DC00177B68 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
-		1861BC8F26FEF5DC00177B68 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		1861BC9026FEF5DC00177B68 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		1861BC9126FEF5DC00177B68 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		1861BC9226FEF5DC00177B68 /* CS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CS.swift; sourceTree = "<group>"; };
-		1861BC9326FEF5DC00177B68 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		1861BC9426FEF5DC00177B68 /* AppUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtilities.swift; sourceTree = "<group>"; };
-		1861BCA726FEF5EF00177B68 /* GeneralConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralConstants.swift; sourceTree = "<group>"; };
+		1861BCA726FEF5EF00177B68 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1861BCA826FEF5EF00177B68 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		1861BCA926FEF5EF00177B68 /* UIView_Borders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_Borders.swift; sourceTree = "<group>"; };
 		1861BCAA26FEF5EF00177B68 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		1861BCAB26FEF5EF00177B68 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		1861BCAC26FEF5EF00177B68 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -97,6 +83,19 @@
 		1861BCAF26FEF5EF00177B68 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		1861BCB026FEF5EF00177B68 /* AppUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtilities.swift; sourceTree = "<group>"; };
 		189DD69627004B8400F0163E /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		189DD6B32700526900F0163E /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		189DD6C7270063EA00F0163E /* ParentClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentClass.swift; sourceTree = "<group>"; };
+		189DD71A27006DE300F0163E /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
+		189DD7752700749400F0163E /* YPDrawSignatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPDrawSignatureView.swift; sourceTree = "<group>"; };
+		189DD7772700749400F0163E /* RadioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
+		189DD7792700749400F0163E /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		189DD77B2700749400F0163E /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		189DD77C2700749400F0163E /* MaterialTextFiled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextFiled.swift; sourceTree = "<group>"; };
+		189DD77E2700749400F0163E /* CustomComboBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomComboBoxView.swift; sourceTree = "<group>"; };
+		189DD77F2700749400F0163E /* CustomInputTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInputTextView.swift; sourceTree = "<group>"; };
+		189DD7802700749400F0163E /* DropDownPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownPickerView.swift; sourceTree = "<group>"; };
+		189DD7882700749400F0163E /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		189DD7892700749400F0163E /* CustomTextFieldForAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFieldForAttribute.swift; sourceTree = "<group>"; };
 		4BB5F4EB45C4C58882C23D00 /* Pods-Gunjan_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gunjan_Demo.release.xcconfig"; path = "Target Support Files/Pods-Gunjan_Demo/Pods-Gunjan_Demo.release.xcconfig"; sourceTree = "<group>"; };
 		C7AF988C54A3C8AE82314039 /* Pods-Gunjan_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gunjan_Demo.debug.xcconfig"; path = "Target Support Files/Pods-Gunjan_Demo/Pods-Gunjan_Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D882B21F6D84F5F89C0DE3CE /* Pods_Gunjan_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gunjan_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,8 +192,8 @@
 				1861BC6B26FEF51000177B68 /* APP DELEGATE */,
 				1861BC7126FEF51000177B68 /* CONTROLLERS */,
 				189DD69527004B3F00F0163E /* API MANAGER */,
-				1861BC6E26FEF51000177B68 /* RESOURCES */,
 				1861BC6F26FEF51000177B68 /* UTILITIES */,
+				1861BC6E26FEF51000177B68 /* RESOURCES */,
 			);
 			path = CLASSES;
 			sourceTree = "<group>";
@@ -211,7 +210,6 @@
 		1861BC6E26FEF51000177B68 /* RESOURCES */ = {
 			isa = PBXGroup;
 			children = (
-				1861BC8826FEF5DC00177B68 /* HELPERS */,
 			);
 			path = RESOURCES;
 			sourceTree = "<group>";
@@ -219,6 +217,7 @@
 		1861BC6F26FEF51000177B68 /* UTILITIES */ = {
 			isa = PBXGroup;
 			children = (
+				189DD7712700749400F0163E /* CustomVIew */,
 				1861BCA426FEF5EF00177B68 /* HELPERS */,
 			);
 			path = UTILITIES;
@@ -227,6 +226,7 @@
 		1861BC7126FEF51000177B68 /* CONTROLLERS */ = {
 			isa = PBXGroup;
 			children = (
+				189DD6C7270063EA00F0163E /* ParentClass.swift */,
 				1861BC7226FEF51000177B68 /* ViewController.swift */,
 			);
 			path = CONTROLLERS;
@@ -235,6 +235,7 @@
 		1861BC7326FEF51000177B68 /* MODEL */ = {
 			isa = PBXGroup;
 			children = (
+				189DD71A27006DE300F0163E /* ImageData.swift */,
 			);
 			path = MODEL;
 			sourceTree = "<group>";
@@ -249,32 +250,12 @@
 			path = VIEW;
 			sourceTree = "<group>";
 		};
-		1861BC8826FEF5DC00177B68 /* HELPERS */ = {
-			isa = PBXGroup;
-			children = (
-				1861BC8926FEF5DC00177B68 /* LanguageStrings.swift */,
-				1861BC8A26FEF5DC00177B68 /* Consts.swift */,
-				1861BC8B26FEF5DC00177B68 /* GeneralConstants.swift */,
-				1861BC8C26FEF5DC00177B68 /* Enums.swift */,
-				1861BC8D26FEF5DC00177B68 /* UIView_Borders.swift */,
-				1861BC8E26FEF5DC00177B68 /* RoundedView.swift */,
-				1861BC8F26FEF5DC00177B68 /* UserData.swift */,
-				1861BC9026FEF5DC00177B68 /* Extensions.swift */,
-				1861BC9126FEF5DC00177B68 /* Validation.swift */,
-				1861BC9226FEF5DC00177B68 /* CS.swift */,
-				1861BC9326FEF5DC00177B68 /* Utils.swift */,
-				1861BC9426FEF5DC00177B68 /* AppUtilities.swift */,
-			);
-			name = HELPERS;
-			path = Gunjan_Demo/CLASSES/UTILITIES/HELPERS;
-			sourceTree = SOURCE_ROOT;
-		};
 		1861BCA426FEF5EF00177B68 /* HELPERS */ = {
 			isa = PBXGroup;
 			children = (
-				1861BCA726FEF5EF00177B68 /* GeneralConstants.swift */,
+				189DD6B32700526900F0163E /* Utility.swift */,
+				1861BCA726FEF5EF00177B68 /* Constants.swift */,
 				1861BCA826FEF5EF00177B68 /* Enums.swift */,
-				1861BCA926FEF5EF00177B68 /* UIView_Borders.swift */,
 				1861BCAA26FEF5EF00177B68 /* RoundedView.swift */,
 				1861BCAB26FEF5EF00177B68 /* UserData.swift */,
 				1861BCAC26FEF5EF00177B68 /* Extensions.swift */,
@@ -294,13 +275,37 @@
 			path = "API MANAGER";
 			sourceTree = "<group>";
 		};
+		189DD7712700749400F0163E /* CustomVIew */ = {
+			isa = PBXGroup;
+			children = (
+				189DD7742700749400F0163E /* Signature */,
+				189DD7772700749400F0163E /* RadioView.swift */,
+				189DD7792700749400F0163E /* CustomButton.swift */,
+				189DD77B2700749400F0163E /* CustomTextField.swift */,
+				189DD77C2700749400F0163E /* MaterialTextFiled.swift */,
+				189DD77E2700749400F0163E /* CustomComboBoxView.swift */,
+				189DD77F2700749400F0163E /* CustomInputTextView.swift */,
+				189DD7802700749400F0163E /* DropDownPickerView.swift */,
+				189DD7882700749400F0163E /* CustomLabel.swift */,
+				189DD7892700749400F0163E /* CustomTextFieldForAttribute.swift */,
+			);
+			path = CustomVIew;
+			sourceTree = "<group>";
+		};
+		189DD7742700749400F0163E /* Signature */ = {
+			isa = PBXGroup;
+			children = (
+				189DD7752700749400F0163E /* YPDrawSignatureView.swift */,
+			);
+			path = Signature;
+			sourceTree = "<group>";
+		};
 		A34006CBAE8951F50AA0B3F1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				C7AF988C54A3C8AE82314039 /* Pods-Gunjan_Demo.debug.xcconfig */,
 				4BB5F4EB45C4C58882C23D00 /* Pods-Gunjan_Demo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -409,7 +414,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1861BC8126FEF51000177B68 /* Info.plist in Resources */,
 				1861BC8026FEF51000177B68 /* Main.storyboard in Resources */,
 				1861BC7E26FEF51000177B68 /* Assets.xcassets in Resources */,
 				1861BC7F26FEF51000177B68 /* LaunchScreen.storyboard in Resources */,
@@ -479,30 +483,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189DD6B42700526900F0163E /* Utility.swift in Sources */,
+				189DD7932700749400F0163E /* MaterialTextFiled.swift in Sources */,
 				1861BCB826FEF5EF00177B68 /* Extensions.swift in Sources */,
-				1861BCB526FEF5EF00177B68 /* UIView_Borders.swift in Sources */,
-				1861BC9926FEF5DC00177B68 /* UIView_Borders.swift in Sources */,
 				1861BCBA26FEF5EF00177B68 /* CS.swift in Sources */,
 				1861BCB626FEF5EF00177B68 /* RoundedView.swift in Sources */,
+				189DD6C8270063EA00F0163E /* ParentClass.swift in Sources */,
 				1861BCBB26FEF5EF00177B68 /* Utils.swift in Sources */,
+				189DD79F2700749400F0163E /* CustomTextFieldForAttribute.swift in Sources */,
 				1861BC7D26FEF51000177B68 /* ViewController.swift in Sources */,
-				1861BC9A26FEF5DC00177B68 /* RoundedView.swift in Sources */,
-				1861BC9F26FEF5DC00177B68 /* Utils.swift in Sources */,
-				1861BC9E26FEF5DC00177B68 /* CS.swift in Sources */,
+				189DD7922700749400F0163E /* CustomTextField.swift in Sources */,
+				189DD71B27006DE300F0163E /* ImageData.swift in Sources */,
+				189DD7952700749400F0163E /* CustomComboBoxView.swift in Sources */,
+				189DD7972700749400F0163E /* DropDownPickerView.swift in Sources */,
 				189DD69727004B8400F0163E /* APIManager.swift in Sources */,
+				189DD7962700749400F0163E /* CustomInputTextView.swift in Sources */,
 				1861BCBC26FEF5EF00177B68 /* AppUtilities.swift in Sources */,
-				1861BC9626FEF5DC00177B68 /* Consts.swift in Sources */,
 				1861BC7B26FEF51000177B68 /* AppDelegate.swift in Sources */,
-				1861BCA026FEF5DC00177B68 /* AppUtilities.swift in Sources */,
-				1861BC9526FEF5DC00177B68 /* LanguageStrings.swift in Sources */,
-				1861BCB326FEF5EF00177B68 /* GeneralConstants.swift in Sources */,
-				1861BC9826FEF5DC00177B68 /* Enums.swift in Sources */,
-				1861BC9726FEF5DC00177B68 /* GeneralConstants.swift in Sources */,
-				1861BC9B26FEF5DC00177B68 /* UserData.swift in Sources */,
+				1861BCB326FEF5EF00177B68 /* Constants.swift in Sources */,
 				1861BCB726FEF5EF00177B68 /* UserData.swift in Sources */,
-				1861BC9C26FEF5DC00177B68 /* Extensions.swift in Sources */,
-				1861BC9D26FEF5DC00177B68 /* Validation.swift in Sources */,
+				189DD78E2700749400F0163E /* RadioView.swift in Sources */,
+				189DD7902700749400F0163E /* CustomButton.swift in Sources */,
 				1861BC7C26FEF51000177B68 /* SceneDelegate.swift in Sources */,
+				189DD78C2700749400F0163E /* YPDrawSignatureView.swift in Sources */,
+				189DD79E2700749400F0163E /* CustomLabel.swift in Sources */,
 				1861BCB926FEF5EF00177B68 /* Validation.swift in Sources */,
 				1861BCB426FEF5EF00177B68 /* Enums.swift in Sources */,
 			);
@@ -682,8 +686,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = YA4536WK7P;
 				INFOPLIST_FILE = Gunjan_Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -702,8 +707,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = YA4536WK7P;
 				INFOPLIST_FILE = Gunjan_Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -6,14 +6,30 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = true
+        IQKeyboardManager .shared.toolbarPreviousNextAllowedClasses = [UIScrollView.self]
+
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        if #available(iOS 13.0, *) {
+            window?.overrideUserInterfaceStyle = .light
+        }
+
+        if IS_IPHONE_X_XR_XMAX_12{
+            ParentClass.shared.iPhone_X_Bottom_Padding = 20
+        }
+        STATUS_BAR_HEIGHT = IS_IPHONE_X_XR_XMAX_12 ? 44 : 20
+
+        print(STATUS_BAR_HEIGHT)
         return true
     }
 

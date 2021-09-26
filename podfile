@@ -7,6 +7,7 @@ target 'Gunjan_Demo' do
  	
   pod 'SDWebImage'
   pod 'TextFieldEffects'
+  pod 'NotificationBannerSwift'	
   pod 'IQKeyboardManagerSwift' 
   pod 'Alamofire'
   pod 'SwiftyJSON'
@@ -15,6 +16,7 @@ target 'Gunjan_Demo' do
   pod 'JAPinView', :git=> 'https://github.com/JayachandraA/JAPinView.git'
   pod 'JNKeychain'
   pod 'MaterialComponents/TextControls+OutlinedTextFields'
+  pod 'MaterialComponents/TextControls+OutlinedTextAreas'
 
   end
 
