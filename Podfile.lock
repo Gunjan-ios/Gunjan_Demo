@@ -1,0 +1,93 @@
+PODS:
+  - Alamofire (5.4.1)
+  - DLRadioButton (1.4.12)
+  - IQKeyboardManagerSwift (6.5.6)
+  - JAPinView (0.1.0)
+  - JNKeychain (0.1.4)
+  - JQProgressHUD (2.7)
+  - MaterialComponents/AnimationTiming (119.3.0)
+  - MaterialComponents/Availability (119.3.0)
+  - MaterialComponents/private/Math (119.3.0)
+  - "MaterialComponents/private/TextControlsPrivate+BaseStyle (119.3.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/private/TextControlsPrivate+OutlinedStyle (119.3.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/private/TextControlsPrivate+Shared (119.3.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Math
+    - "MaterialComponents/TextControls+Enums"
+  - "MaterialComponents/private/TextControlsPrivate+TextFields (119.3.0)":
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/TextControls+BaseTextFields (119.3.0)":
+    - "MaterialComponents/private/TextControlsPrivate+BaseStyle"
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+    - "MaterialComponents/private/TextControlsPrivate+TextFields"
+    - MDFInternationalization
+  - "MaterialComponents/TextControls+Enums (119.3.0)"
+  - "MaterialComponents/TextControls+OutlinedTextFields (119.3.0)":
+    - MaterialComponents/Availability
+    - "MaterialComponents/private/TextControlsPrivate+OutlinedStyle"
+    - "MaterialComponents/TextControls+BaseTextFields"
+  - MDFInternationalization (2.0.0)
+  - SDWebImage (5.10.2):
+    - SDWebImage/Core (= 5.10.2)
+  - SDWebImage/Core (5.10.2)
+  - SwiftyJSON (5.0.0)
+  - TextFieldEffects (1.6.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - DLRadioButton (~> 1.4)
+  - IQKeyboardManagerSwift
+  - JAPinView (from `https://github.com/JayachandraA/JAPinView.git`)
+  - JNKeychain
+  - JQProgressHUD
+  - "MaterialComponents/TextControls+OutlinedTextFields"
+  - SDWebImage
+  - SwiftyJSON
+  - TextFieldEffects
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - DLRadioButton
+    - IQKeyboardManagerSwift
+    - JNKeychain
+    - JQProgressHUD
+    - MaterialComponents
+    - MDFInternationalization
+    - SDWebImage
+    - SwiftyJSON
+    - TextFieldEffects
+
+EXTERNAL SOURCES:
+  JAPinView:
+    :git: https://github.com/JayachandraA/JAPinView.git
+
+CHECKOUT OPTIONS:
+  JAPinView:
+    :commit: dc062ba86910d20a5feb9fe39dcba21a6f6969ce
+    :git: https://github.com/JayachandraA/JAPinView.git
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  JAPinView: 7a3cc5ff1cb0c76d96cd63ecec20ed46d378c237
+  JNKeychain: fb6cc9ec95959ba46cd95d0ee6f7a05e41da9f42
+  JQProgressHUD: 45463f7760f004e5c259c2b912a704b5b5b32732
+  MaterialComponents: 49658f0fd7ef6e098e9943fce3f293e700595570
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
+
+PODFILE CHECKSUM: 9f5469befd3e62203f1b099716eec670abe75b0e
+
+COCOAPODS: 1.9.3
