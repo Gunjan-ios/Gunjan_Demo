@@ -40,9 +40,9 @@ class ParentClass: UIViewController{
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.view.backgroundColor = colorPrimary
+//        self.view.backgroundColor = colorPrimary
         navigationController?.interactivePopGestureRecognizer?.isEnabled = true
-        self.navigationController?.isNavigationBarHidden = true
+//        self.navigationController?.isNavigationBarHidden = true
         let imgNav = UIView (frame: CGRect (x: 0, y: 0, width: SCREEN_WIDTH, height: STATUS_BAR_HEIGHT))
         imgNav.backgroundColor = colorPrimary
         self.view.addSubview(imgNav)

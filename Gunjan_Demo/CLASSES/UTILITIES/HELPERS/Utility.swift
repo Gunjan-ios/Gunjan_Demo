@@ -649,7 +649,7 @@ func setToUserDefaultForKey(_ value:AnyObject?,key:String)
 }
 
 //Set Archive Value
-func setToUserDefaultForKeyByArchive(_ value:AnyObject?,key:String)
+func setToUserDefaultForKeyByArchive(_ value:[Article]?,key:String)
 {
 //    UserDefaults.standard.set(value == nil ? nil : NSKeyedArchiver.archivedData(withRootObject: value!), forKey: key)
 //    UserDefaults.standard.synchronize()
@@ -669,9 +669,9 @@ func getFromUserDefaultForKey(_ key:String)->AnyObject?
 }
 
 //Get UnArchive Value
-func getFromUserDefaultForKeyByUnArchive(_ key:String)->AnyObject?
+func getFromUserDefaultForKeyByUnArchive(_ key:String)->[Article]?
 {
-    return UserDefaults.standard.object(forKey: key) == nil ? nil :NSKeyedUnarchiver.unarchiveObject(with: UserDefaults.standard.object(forKey: key) as! Data) as AnyObject?
+    return UserDefaults.standard.object(forKey: key) == nil ? nil :NSKeyedUnarchiver.unarchiveObject(with: UserDefaults.standard.object(forKey: key) as! Data) as! [Article]?
 
 //    do {
 //           let oldUbiquityIdentityToken = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(UserDefaults.standard.object(forKey: key)! as! Data) as AnyObject?

@@ -9,32 +9,86 @@ import MaterialComponents
 
 class ViewController: ParentClass {
 
-    fileprivate var txtFirst : MDCOutlinedTextField!
 
+    @IBOutlet weak var tblList: UITableView!
+    var listData : [Article] = [Article]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tblList.delegate = self
+        tblList.dataSource = self        
+        tblList.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "ListTableViewCell")
+        tblList.separatorStyle = .none
+        tblList.backgroundColor = .systemGray6
+        self.tblList.estimatedRowHeight = UITableView.automaticDimension
+
         let data = getFromUserDefaultForKeyByUnArchive(key_dataSave)
-//        let strDeviceToken = getFromUserDefaultForKey("data") != nil ? JSON(getFromUserDefaultForKey("data")).stringValue : ""
-        getListAPI()
+        printLog(msg: data)
+        if data != nil{
+            listData = data!
+            listData.count > 0 ? tblList.reloadData() :  self.showBanner(title: "Alert", subTitle: CS.Common.NoData , style: .danger, vc: self)
+        }else{
+            getListAPI()
+
+        }
     }
-}
 
 
 
-//MARK: - API FUNCATION
+//MARK: - API FUNCATION®
 
-extension ViewController {
     func getListAPI() {
 
-        APIManager.callAPIGetRequest(Method: .get, url: "\(BASE_URL)\(API_KEY)", parameters: nil, headers: const_HeaderWithToken, showAlert: true, withloader:true, viewContoller: self , completion: { (DATA, message) in
+        APIManager.callAPIGetRequest(Method: .get, url: "\(BASE_URL)\(API_KEY)", parameters: nil, headers: const_HeaderWithToken, showAlert: true, withloader:true, viewContoller: self , completion: { [self] (DATA, message) in
             
-            setToUserDefaultForKeyByArchive(DATA["articles"], key: key_dataSave)
+            let status = DATA["status"].stringValue
+            
+            if status == "ok"{
+                DATA["articles"].arrayValue.forEach{ item in
+                    let value = Article.init(fromJson: item)
+                    listData.append(value)
+                }
+                setToUserDefaultForKeyByArchive(listData, key: key_dataSave)
 
+                listData.count > 0 ? tblList.reloadData() :  self.showBanner(title: "Alert", subTitle: CS.Common.NoData , style: .danger, vc: self)
+            }else{
+                self.showBanner(title: "Alert", subTitle: CS.Common.defaultFailedMessage , style: .danger, vc: self)
+            }
+    
         }) { (response, errorMessage) in
             self.showBanner(title: "Alert", subTitle: errorMessage , style: .danger, vc: self)
         }
     }
 
 
+}
+
+
+extension ViewController : UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listData.count
+    }
+    
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let cell = tblList.dequeueReusableCell(withIdentifier: String(describing: ListTableViewCell.self)) as! ListTableViewCell
+
+        let dic = listData[indexPath.row]
+        cell.author.text = dic.author
+//        cell.date.text = Utils.convertDateFormat(inputDate: dic.publishedAt)
+        cell.date.text = dic.publishedAt
+        cell.title.text = dic.title
+        cell.newsLink.setTitle(dic.url, for: .normal)
+        cell.imgView.sd_setImage(with: URL (string: dic.urlToImage), placeholderImage: UIImage (named: "placeHolder"), options: .progressiveLoad, progress: nil, completed: nil)
+        return cell
+        
+        
+    }
+    
+    
+    
+    
+    
+    
 }

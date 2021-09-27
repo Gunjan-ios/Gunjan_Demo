@@ -194,10 +194,10 @@ class Utils: NSObject {
 
    static func convertDateFormat(inputDate: String) -> String {
         let olDateFormatter = DateFormatter()
-        olDateFormatter.dateFormat = dateTimeFormatDisplay
+        olDateFormatter.dateFormat = dateTimeFormatDefault
         let oldDate = olDateFormatter.date(from: inputDate)
         let convertDateFormatter = DateFormatter()
-        convertDateFormatter.dateStyle = .medium
+        convertDateFormatter.dateFormat = dateTimeFormatDisplay
         return convertDateFormatter.string(from: oldDate!)
     }
 
