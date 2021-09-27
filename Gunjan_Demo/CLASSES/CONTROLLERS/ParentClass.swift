@@ -107,7 +107,7 @@ class ParentClass: UIViewController{
         let subString = splitdate.first!
         let newDate = String(subString)
         let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatterGet.dateFormat = dateTimeFormatDefault
         dateFormatterGet.timeZone = TimeZone(abbreviation: "UTC")
         
         let dateFormatterPrint = DateFormatter()

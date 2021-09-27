@@ -199,8 +199,10 @@ let  UPLAOD_TITLE = "Uploading..."
 
 
 //MARK: - DateTime -
+//yyyy-MM-dd'T'HH:mm:ss*SSSZZZZ
+//2021-09-27T03:22:23+00:00
 
-let dateTimeFormatDefault          = "yyyy-MM-ddTHH:mm:ss+ss:ss"
+let dateTimeFormatDefault          = "yyyy-MM-dd'T'HH:mm:ssZZZ"
 let dateTimeFormatDisplay          = "MMM dd,yyyy hh:mm a" 
 let dateFormatDefault                 = "yyyy-MM-dd"
 let dateFormatDisplay                 = "MM-dd-yyyy"

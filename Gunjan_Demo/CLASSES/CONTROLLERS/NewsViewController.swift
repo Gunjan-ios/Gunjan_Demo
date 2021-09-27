@@ -22,8 +22,12 @@ class NewsViewController: ParentClass ,WKNavigationDelegate{
         Utils.showLoading(title:"Loading..")
         // Do any additional setup after loading the view.
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        Utils.hideLoading()
+    }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        printLog(msg: "Done")
         Utils.hideLoading()
     }
     

@@ -654,10 +654,11 @@ func setToUserDefaultForKeyByArchive(_ value:[Article]?,key:String)
 //    UserDefaults.standard.set(value == nil ? nil : NSKeyedArchiver.archivedData(withRootObject: value!), forKey: key)
 //    UserDefaults.standard.synchronize()
     do {
-        let data = try NSKeyedArchiver.archivedData(withRootObject: value!, requiringSecureCoding: true)
+        let data = try NSKeyedArchiver.archivedData(withRootObject: value!, requiringSecureCoding: false)
         UserDefaults.standard.set(data, forKey: key)
         UserDefaults.standard.synchronize()
     } catch {
+        printLog(msg: "Error")
         return
     }
 }

@@ -21,9 +21,8 @@ class ViewController: ParentClass {
         tblList.separatorStyle = .none
         tblList.backgroundColor = .systemGray6
         self.tblList.estimatedRowHeight = UITableView.automaticDimension
-
+        
         let data = getFromUserDefaultForKeyByUnArchive(key_dataSave)
-        printLog(msg: data)
         if data != nil{
             listData = data!
             listData.count > 0 ? tblList.reloadData() :  self.showBanner(title: "Alert", subTitle: CS.Common.NoData , style: .danger, vc: self)
@@ -35,7 +34,7 @@ class ViewController: ParentClass {
 
 
 
-//MARK: - API FUNCATION®
+//MARK: - API FUNCATION
 
     func getListAPI() {
 
@@ -63,21 +62,22 @@ class ViewController: ParentClass {
 
 }
 
-
+//MARK:- Tablew View Delegate
 extension ViewController : UITableViewDelegate,UITableViewDataSource{
+  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listData.count
     }
     
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tblList.dequeueReusableCell(withIdentifier: String(describing: ListTableViewCell.self)) as! ListTableViewCell
 
         let dic = listData[indexPath.row]
         cell.author.text = dic.author
-//        cell.date.text = Utils.convertDateFormat(inputDate: dic.publishedAt)
-        cell.date.text = dic.publishedAt
+        cell.date.text = Utils.convertDateFormat(inputDate: dic.publishedAt)
+//        cell.date.text = self.getDate(date: dic.publishedAt)
+//        cell.date.text = dic.publishedAt
         cell.title.text = dic.title
         cell.newsLink.setTitle(dic.url, for: .normal)
         cell.newsLink.tag = indexPath.row
@@ -91,10 +91,7 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         vc?.articalData = listData[indexPath.row]
         self.navigationController?.pushViewController(vc!, animated: true)
     }
-    
-    
     @objc func urlLinkPressed(sender : UIButton){
-        
         let newVC = self.storyboard?.instantiateViewController(identifier: CS.Identifiers.NewsViewController) as? NewsViewController
         newVC?.strUrl  = listData[sender.tag].url
         self.navigationController?.pushViewController(newVC!, animated: true)
