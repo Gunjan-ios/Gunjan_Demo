@@ -222,3 +222,9 @@ let shadowradius : CGFloat = 2.0
 
 let tableCellColor : UIColor = .systemGray6
 let bordercolor : UIColor = .label
+
+
+
+
+let API_KEY = "57d678aff8d34169b74146df628b759f"
+let key_dataSave = "SavedList"

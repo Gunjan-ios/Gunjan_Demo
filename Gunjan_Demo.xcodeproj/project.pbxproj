@@ -39,6 +39,10 @@
 		189DD79E2700749400F0163E /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DD7882700749400F0163E /* CustomLabel.swift */; };
 		189DD79F2700749400F0163E /* CustomTextFieldForAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DD7892700749400F0163E /* CustomTextFieldForAttribute.swift */; };
 		264DC70299C8FE25D378EC68 /* Pods_Gunjan_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D882B21F6D84F5F89C0DE3CE /* Pods_Gunjan_Demo.framework */; };
+		4D28221727019537008B1FF3 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D28221527019537008B1FF3 /* Source.swift */; };
+		4D28221827019537008B1FF3 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D28221627019537008B1FF3 /* Article.swift */; };
+		4D28222A270196F4008B1FF3 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D282228270196F4008B1FF3 /* ListTableViewCell.swift */; };
+		4D28222B270196F4008B1FF3 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D282229270196F4008B1FF3 /* ListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +101,10 @@
 		189DD7882700749400F0163E /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		189DD7892700749400F0163E /* CustomTextFieldForAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFieldForAttribute.swift; sourceTree = "<group>"; };
 		4BB5F4EB45C4C58882C23D00 /* Pods-Gunjan_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gunjan_Demo.release.xcconfig"; path = "Target Support Files/Pods-Gunjan_Demo/Pods-Gunjan_Demo.release.xcconfig"; sourceTree = "<group>"; };
+		4D28221527019537008B1FF3 /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		4D28221627019537008B1FF3 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		4D282228270196F4008B1FF3 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		4D282229270196F4008B1FF3 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		C7AF988C54A3C8AE82314039 /* Pods-Gunjan_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gunjan_Demo.debug.xcconfig"; path = "Target Support Files/Pods-Gunjan_Demo/Pods-Gunjan_Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D882B21F6D84F5F89C0DE3CE /* Pods_Gunjan_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gunjan_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -193,7 +201,6 @@
 				1861BC7126FEF51000177B68 /* CONTROLLERS */,
 				189DD69527004B3F00F0163E /* API MANAGER */,
 				1861BC6F26FEF51000177B68 /* UTILITIES */,
-				1861BC6E26FEF51000177B68 /* RESOURCES */,
 			);
 			path = CLASSES;
 			sourceTree = "<group>";
@@ -205,13 +212,6 @@
 				1861BC6D26FEF51000177B68 /* SceneDelegate.swift */,
 			);
 			path = "APP DELEGATE";
-			sourceTree = "<group>";
-		};
-		1861BC6E26FEF51000177B68 /* RESOURCES */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RESOURCES;
 			sourceTree = "<group>";
 		};
 		1861BC6F26FEF51000177B68 /* UTILITIES */ = {
@@ -235,6 +235,8 @@
 		1861BC7326FEF51000177B68 /* MODEL */ = {
 			isa = PBXGroup;
 			children = (
+				4D28221627019537008B1FF3 /* Article.swift */,
+				4D28221527019537008B1FF3 /* Source.swift */,
 				189DD71A27006DE300F0163E /* ImageData.swift */,
 			);
 			path = MODEL;
@@ -243,6 +245,7 @@
 		1861BC7426FEF51000177B68 /* VIEW */ = {
 			isa = PBXGroup;
 			children = (
+				4D282224270196C0008B1FF3 /* TableviewCell */,
 				1861BC7526FEF51000177B68 /* Assets.xcassets */,
 				1861BC7626FEF51000177B68 /* LaunchScreen.storyboard */,
 				1861BC7826FEF51000177B68 /* Main.storyboard */,
@@ -298,6 +301,15 @@
 				189DD7752700749400F0163E /* YPDrawSignatureView.swift */,
 			);
 			path = Signature;
+			sourceTree = "<group>";
+		};
+		4D282224270196C0008B1FF3 /* TableviewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4D282228270196F4008B1FF3 /* ListTableViewCell.swift */,
+				4D282229270196F4008B1FF3 /* ListTableViewCell.xib */,
+			);
+			path = TableviewCell;
 			sourceTree = "<group>";
 		};
 		A34006CBAE8951F50AA0B3F1 /* Pods */ = {
@@ -415,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1861BC8026FEF51000177B68 /* Main.storyboard in Resources */,
+				4D28222B270196F4008B1FF3 /* ListTableViewCell.xib in Resources */,
 				1861BC7E26FEF51000177B68 /* Assets.xcassets in Resources */,
 				1861BC7F26FEF51000177B68 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -483,6 +496,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D28221827019537008B1FF3 /* Article.swift in Sources */,
+				4D28222A270196F4008B1FF3 /* ListTableViewCell.swift in Sources */,
 				189DD6B42700526900F0163E /* Utility.swift in Sources */,
 				189DD7932700749400F0163E /* MaterialTextFiled.swift in Sources */,
 				1861BCB826FEF5EF00177B68 /* Extensions.swift in Sources */,
@@ -497,6 +512,7 @@
 				189DD7952700749400F0163E /* CustomComboBoxView.swift in Sources */,
 				189DD7972700749400F0163E /* DropDownPickerView.swift in Sources */,
 				189DD69727004B8400F0163E /* APIManager.swift in Sources */,
+				4D28221727019537008B1FF3 /* Source.swift in Sources */,
 				189DD7962700749400F0163E /* CustomInputTextView.swift in Sources */,
 				1861BCBC26FEF5EF00177B68 /* AppUtilities.swift in Sources */,
 				1861BC7B26FEF51000177B68 /* AppDelegate.swift in Sources */,
@@ -686,7 +702,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YA4536WK7P;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Gunjan_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -707,7 +723,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YA4536WK7P;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Gunjan_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

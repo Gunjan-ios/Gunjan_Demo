@@ -13,7 +13,5 @@ struct AGImageInfo {
     var data: Data
 }
 
-class ImageData: NSObject {
 
-}
 

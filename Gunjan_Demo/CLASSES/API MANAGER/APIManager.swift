@@ -15,8 +15,8 @@ let FinalURL = "https://www..com/"
 
 
 let MAIN_URL  =   "\(FinalURL)api/v1/"
-let BASE_URL                      =   "\(MAIN_URL)"
-let BASE_URL_SUBENDPOINT              =   "\(MAIN_URL)any/"
+let BASE_URL                      =   "https://newsapi.org/v2/top-headlines?sources=google-news&apiKey="
+
 
 class APIManager {
 

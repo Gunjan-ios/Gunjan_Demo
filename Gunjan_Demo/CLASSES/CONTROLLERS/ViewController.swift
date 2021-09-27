@@ -2,8 +2,6 @@
 //  ViewController.swift
 //  Gunjan_Demo
 //
-//  Created by Gunjan Raval on 25/09/21.
-//
 
 import UIKit
 import SwiftyJSON
@@ -15,32 +13,26 @@ class ViewController: ParentClass {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //        showBanner(title: "this is subtitle..", subTitle: "", style: .success, vc: self )
-
-        txtFirst = MDCOutlinedTextField (frame: CGRect (x: X_PADDING, y: 0, width: SCREEN_WIDTH - X_PADDING*2, height: NEXT_BUTTON_HEIGHT))
-        txtFirst.InitDesign(pImageName: "profile", PInfoText: "firstName", pPlaceHolder: "Full Name")
-        self.view.addSubview(txtFirst)
-
+        
+        let data = getFromUserDefaultForKeyByUnArchive(key_dataSave)
+//        let strDeviceToken = getFromUserDefaultForKey("data") != nil ? JSON(getFromUserDefaultForKey("data")).stringValue : ""
+        getListAPI()
     }
-
-
 }
 
+
+
+//MARK: - API FUNCATION
+
 extension ViewController {
-    //MARK: - User Login
-    func doLogin() {
+    func getListAPI() {
 
-        let strDeviceToken = getFromUserDefaultForKey("test") != nil ? JSON(getFromUserDefaultForKey("test")).stringValue : ""
-
-
-        let param = [String: AnyObject]()
-
-        APIManager.callAPIRequest(Method: .post, url: "\(BASE_URL_SUBENDPOINT)", parameters: param, headers: const_HeaderWithToken, showAlert: true, withloader:true, viewContoller: self , completion: { (DATA, message) in
+        APIManager.callAPIGetRequest(Method: .get, url: "\(BASE_URL)\(API_KEY)", parameters: nil, headers: const_HeaderWithToken, showAlert: true, withloader:true, viewContoller: self , completion: { (DATA, message) in
+            
+            setToUserDefaultForKeyByArchive(DATA["articles"], key: key_dataSave)
 
         }) { (response, errorMessage) in
-
-            printLog(msg:errorMessage)
+            self.showBanner(title: "Alert", subTitle: errorMessage , style: .danger, vc: self)
         }
     }
 
