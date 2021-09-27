@@ -85,7 +85,12 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         
         
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc = self.storyboard?.instantiateViewController(identifier: CS.Identifiers.DetailViewController) as? DetailViewController
+        vc?.articalData = listData[indexPath.row]
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
     
     
     

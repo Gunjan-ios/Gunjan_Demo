@@ -43,6 +43,7 @@
 		4D28221827019537008B1FF3 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D28221627019537008B1FF3 /* Article.swift */; };
 		4D28222A270196F4008B1FF3 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D282228270196F4008B1FF3 /* ListTableViewCell.swift */; };
 		4D28222B270196F4008B1FF3 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D282229270196F4008B1FF3 /* ListTableViewCell.xib */; };
+		4D2822302701ADBB008B1FF3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D28222F2701ADBA008B1FF3 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		4D28221627019537008B1FF3 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		4D282228270196F4008B1FF3 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		4D282229270196F4008B1FF3 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		4D28222F2701ADBA008B1FF3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C7AF988C54A3C8AE82314039 /* Pods-Gunjan_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gunjan_Demo.debug.xcconfig"; path = "Target Support Files/Pods-Gunjan_Demo/Pods-Gunjan_Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D882B21F6D84F5F89C0DE3CE /* Pods_Gunjan_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gunjan_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -228,6 +230,7 @@
 			children = (
 				189DD6C7270063EA00F0163E /* ParentClass.swift */,
 				1861BC7226FEF51000177B68 /* ViewController.swift */,
+				4D28222F2701ADBA008B1FF3 /* DetailViewController.swift */,
 			);
 			path = CONTROLLERS;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				1861BC7C26FEF51000177B68 /* SceneDelegate.swift in Sources */,
 				189DD78C2700749400F0163E /* YPDrawSignatureView.swift in Sources */,
 				189DD79E2700749400F0163E /* CustomLabel.swift in Sources */,
+				4D2822302701ADBB008B1FF3 /* DetailViewController.swift in Sources */,
 				1861BCB926FEF5EF00177B68 /* Validation.swift in Sources */,
 				1861BCB426FEF5EF00177B68 /* Enums.swift in Sources */,
 			);

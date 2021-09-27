@@ -29,7 +29,7 @@ class CS {
     }
 
     struct Identifiers {
-        static let HomeVC  = "HomeVC"
+        static let DetailViewController  = "DetailViewController"
     }
 
     struct Segue {
