@@ -80,10 +80,10 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         cell.date.text = dic.publishedAt
         cell.title.text = dic.title
         cell.newsLink.setTitle(dic.url, for: .normal)
+        cell.newsLink.tag = indexPath.row
+        cell.newsLink.addTarget(self, action: #selector(urlLinkPressed(sender:)), for: .touchUpInside)
         cell.imgView.sd_setImage(with: URL (string: dic.urlToImage), placeholderImage: UIImage (named: "placeHolder"), options: .progressiveLoad, progress: nil, completed: nil)
         return cell
-        
-        
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -93,7 +93,11 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
     }
     
     
-    
-    
-    
+    @objc func urlLinkPressed(sender : UIButton){
+        
+        let newVC = self.storyboard?.instantiateViewController(identifier: CS.Identifiers.NewsViewController) as? NewsViewController
+        newVC?.strUrl  = listData[sender.tag].url
+        self.navigationController?.pushViewController(newVC!, animated: true)
+        
+    }
 }

@@ -149,21 +149,40 @@
             </objects>
             <point key="canvasLocation" x="1913.0434782608697" y="97.767857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--News View Controller-->
         <scene sceneID="pdA-cR-f1B">
             <objects>
-                <viewController id="nSh-IU-Bkx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsViewController" id="nSh-IU-Bkx" customClass="NewsViewController" customModule="Gunjan_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="80s-i0-JCx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0BN-YU-Iqq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="R4m-oZ-Rcl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="0BN-YU-Iqq" secondAttribute="bottom" id="WP8-1m-nG7"/>
+                            <constraint firstItem="0BN-YU-Iqq" firstAttribute="top" secondItem="R4m-oZ-Rcl" secondAttribute="top" id="Xuc-Bx-BxQ"/>
+                            <constraint firstItem="0BN-YU-Iqq" firstAttribute="leading" secondItem="R4m-oZ-Rcl" secondAttribute="leading" id="hYz-Bj-onZ"/>
+                            <constraint firstItem="0BN-YU-Iqq" firstAttribute="trailing" secondItem="R4m-oZ-Rcl" secondAttribute="trailing" id="oTw-Ki-El3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bf7-Yx-ZQl"/>
+                    <connections>
+                        <outlet property="newsView" destination="0BN-YU-Iqq" id="yBd-7H-bQL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jF-a5-96u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2683" y="98"/>
+            <point key="canvasLocation" x="2682.608695652174" y="97.767857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e7r-87-qyh">

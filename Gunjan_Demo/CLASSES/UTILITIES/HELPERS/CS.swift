@@ -30,6 +30,9 @@ class CS {
 
     struct Identifiers {
         static let DetailViewController  = "DetailViewController"
+        static let NewsViewController  = "NewsViewController"
+
+        
     }
 
     struct Segue {
